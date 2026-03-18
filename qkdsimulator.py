@@ -375,7 +375,7 @@ class QKDSimulator:
         if self.using_improved_serfling:
             return np.sqrt((((c + d)*(1 - b)*b) / (c*d*np.log(2))) * np.log2((c + d) / (c*d*(1 - b)*b*(a**2))))
         else: 
-            return np.sqrt(((d + c) / (d * c)) * ((c + 1) / (c)) * np.log(1 / a))
+            return np.sqrt(((d + c) / (d * c)) * ((d + 1) / (d)) * np.log(1 / a))
 
     def binary_entropy(self, x):
         """Binary entropy function used to compute the maximum secret key rate.
